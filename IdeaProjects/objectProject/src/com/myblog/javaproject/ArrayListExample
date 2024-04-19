@@ -1,0 +1,156 @@
+package com.myblog.javaproject;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        ArrayList<String> list=new ArrayList<>();
+        list.add("aaa");
+        list.add("bbb");
+        list.add("ccc");
+        System.out.println(list);
+        //遍历集合,用逗号分隔
+        System.out.println("[");
+        for (int i = 0; i < list.size(); i++) {
+            if(i< list.size()-1){
+                System.out.print(list.get(i)+",");
+            }else {
+                System.out.print(list.get(i));
+            }
+        }
+        System.out.println("]");
+    }
+}
+
+
+
+//package com.myblog.javaproject;
+//
+//import java.util.ArrayList;
+//import java.util.Random;
+//
+//public class test3 {
+//    public static void main(String[] args){
+//        //集合不能直接添加基本数据类型的数据，需要添加时需要把它变为对应的包装类
+//        //一般的包装类第一个字母为它的大写
+//        ArrayList<Integer> list =new ArrayList<Integer>();
+//        list.add(1);
+//        list.add(2);
+//        list.add(3);
+//        System.out.println(list);
+//        System.out.print("[");
+//        for (int i = 0; i < list.size(); i++) {
+//            if(i< list.size()-1){
+//                System.out.print(list.get(i)+",");
+//            }else {
+//                System.out.print(list.get(i));
+//            }
+//        }
+//        System.out.print("]");
+//    }
+//
+//}
+//
+
+
+
+//package com.myblog.javaproject;
+//
+//import java.util.ArrayList;
+//import java.util.Scanner;
+//
+//public class Test3 {
+//    public static void main(String[] args){
+//        ArrayList<Student> list =new ArrayList<>();
+//        //依次添加三个学生信息,利用键盘录入
+//        Scanner sc=new Scanner(System.in);
+//        System.out.println("请依次输入三位同学的信息,每输入一个信息按回车");
+//        for (int i = 0; i < 3; i++) {
+//            System.out.println("请输入第"+(i+1)+"同学的信息：");
+//            Student s =new Student(sc.nextInt(),sc.next(),sc.nextInt());
+//            list.add(s);
+//        }
+//        //遍历学生信息
+//        for (int i = 0; i < list.size(); i++) {
+//            System.out.println("姓名是："+list.get(i).getName()+"年龄是："+list.get(i).getAge());
+//        }
+//    }
+//}
+//
+
+
+
+//package com.myblog.javaproject;
+//
+//import java.util.ArrayList;
+//import java.util.Scanner;
+//
+//public class TestStudent {
+//    public static void main(String[] args) {
+//        ArrayList<Student> list=new ArrayList<>();
+//        Scanner sc =new Scanner(System.in);
+//        Student s1=new Student(1,"a","1");
+//        Student s2=new Student(2,"b","2");
+//        Student s3=new Student(3,"c","3");
+//        list.add(s1);
+//        list.add(s2);
+//        list.add(s3);
+//        System.out.println(ExistId(list,sc));
+//    }
+//    //定义一个方法判断id是否存在
+//    public static boolean ExistId(ArrayList<Student> list,Scanner sc){
+//        System.out.println("请输入你要查找的id:");
+//        int LookupId=sc.nextInt();
+//        boolean flag=false;
+//        for (int i = 0; i < list.size(); i++) {
+//            if(LookupId==list.get(i).getId());
+////                System.out.println("您输入的id存在！");
+//                flag=true;
+//        }
+//        return flag;
+//
+//    }
+//}
+//
+//
+//
+
+
+
+//package com.myblog.javaproject;
+//
+//import java.util.ArrayList;
+//import java.util.Scanner;
+//
+//public class TestStudent {
+//    public static void main(String[] args) {
+//        ArrayList<Student> list=new ArrayList<>();
+//        Student s1=new Student("小米",1000);
+//        Student s2=new Student("苹果",8888);
+//        Student s3=new Student("锤子",2999);
+//        list.add(s1);
+//        list.add(s2);
+//        list.add(s3);
+//        JudgePrice(list);
+//    }
+//    //定义一个方法，找出价格大于3000的手机的品牌
+//    public static void JudgePrice(ArrayList<Student> list){
+//        for (int i = 0; i < list.size(); i++) {
+//            if(list.get(i).getPrice()>=3000){
+//                System.out.println("价格大于3000的手机品牌是："+list.get(i).getBrand());
+//            }
+//        }
+//    }
+//}
+//
+//
+//
+
+
+
+
+
+
+
+
