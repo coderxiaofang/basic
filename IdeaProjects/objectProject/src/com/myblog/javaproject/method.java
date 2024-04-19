@@ -8,6 +8,6 @@ public class method {
         int i = sc.nextInt();
         double v = sc.nextDouble();
         //ctrl+alt+v自动补齐
-
+        //ctrl+alt+左移动键，快速跳到光标的上一个位置
     }
 }
