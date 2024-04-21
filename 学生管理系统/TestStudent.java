@@ -30,6 +30,7 @@ public class TestStudent {
             String choiceL = sc.next();
             switch (choiceL) {
                 case "1":
+                    LoginStudent(loginList, sc);
                     if (LoginStudent(loginList, sc)) {
                         //loop用于退出外层循环
                         Loop:
@@ -175,9 +176,18 @@ public class TestStudent {
         boolean result = ExistName(list, sc, newLogin);
 //        System.out.println("执行了注册："+result);
         if (result) {
-            System.out.println("请输入密码：");
-            String passward = sc.next();
-            newLogin.setPassward(passward);
+            while (true) {
+                System.out.println("请输入密码：");
+                String passward = sc.next();
+                System.out.println("请再次输入密码：");
+                String rePassward = sc.next();
+                if (passward.equals(rePassward)) {
+                    newLogin.setPassward(passward);
+                    break;
+                } else {
+                    System.out.println("两次密码输入不一致，请重新输入：");
+                }
+            }
 
             while (true) {
                 System.out.println("请输入身份证号：");
@@ -209,15 +219,12 @@ public class TestStudent {
 
     //检查身份证号格式
     private static boolean checkIdNumber(String inputIdNumber) {
-        boolean flag = true;
         //长度必须为18
         if (inputIdNumber.length() != 18) {
-//            flag = false;
             return false;
         }
         //不能以0开头
         if (inputIdNumber.charAt(0) == '0') {
-//            flag = false;
             return false;
 
         }
@@ -225,15 +232,15 @@ public class TestStudent {
         for (int i = 0; i < inputIdNumber.length() - 1; i++) {
             char chs = inputIdNumber.charAt(i);
             if (!(chs >= '0' && chs <= '9')) {
-                flag = false;
+                return false;
             }
         }
         //最后1位为X或x或者数字;
-        char chs = inputIdNumber.charAt(17);
+        char chs = inputIdNumber.charAt(inputIdNumber.length() - 1);
         if (!((chs == 'X') || (chs == 'x') || (chs >= '0' && chs <= '9'))) {
-            flag = false;
+            return false;
         }
-        return flag;
+        return true;
     }
 
     //检查手机号格式
