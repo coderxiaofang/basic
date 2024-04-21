@@ -15,7 +15,7 @@ public class method {
          ctrl+当忘记调用方法的参数显示各参数
          ctrl+alt+M提取方法，可定义方法名
          home快速定位到行首，end快速定位到行尾
-         Alt加鼠标左键选中多个
+         Alt加鼠标左键竖着选中多个
          快速生成JavaBean方法：Alt+insert或者右键点击Ptg to Javabean
          */
         //ctrl+f 全文查找
