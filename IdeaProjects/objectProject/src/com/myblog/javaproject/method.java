@@ -11,5 +11,6 @@
         Alt+insert或者右键点击Ptg to Javabean，快速生成JavaBean方法：
         ctrl+f 全文查找
         ctrl+alt+T 添加while循环
+        ctrl+shift+u 将变量名转为大写
         */
   
