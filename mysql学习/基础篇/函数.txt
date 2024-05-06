@@ -10,6 +10,7 @@ select lower('HELLO');
 #将字符串转化为大写
 SELECT upper('hello');
 
+
 #左填充函数
 select lpad('hello',7,'-');
 
