@@ -1,2 +1,3 @@
-# basic
-Java基础学习
+mysql学习
+java基础
+uniapp项目
